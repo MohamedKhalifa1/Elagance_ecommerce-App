@@ -10,19 +10,19 @@ class MainScreen extends StatelessWidget{
   @override
   Widget build(BuildContext context) {
     // TODO: implement build
-return  SafeArea(
-  child:   Scaffold(
-    // backgroundColor: HexColor('#F3F3F3'),
-    body: Container(
-      height: MediaQuery.of(context).size.height,
-      width: MediaQuery.of(context).size.width,
-      decoration: const BoxDecoration(
-        image: DecorationImage(
-          image: AssetImage('assets/images/background.png',),fit: BoxFit.cover,
-        )
-      ),
-      // height: MediaQuery.of(context).size.height,
-      // width: MediaQuery.of(context).size.width,
+return  Scaffold(
+  // backgroundColor: HexColor('#F3F3F3'),
+  body: Container(
+    height: MediaQuery.of(context).size.height,
+    width: MediaQuery.of(context).size.width,
+    decoration: const BoxDecoration(
+      image: DecorationImage(
+        image: AssetImage('assets/images/background.png',),fit: BoxFit.cover,
+      )
+    ),
+    // height: MediaQuery.of(context).size.height,
+    // width: MediaQuery.of(context).size.width,
+    child: SafeArea(
       child: Column(
         mainAxisAlignment: MainAxisAlignment.start,
         children: [
@@ -67,30 +67,30 @@ return  SafeArea(
           ),
 const Spacer(),
 Column(
-  mainAxisAlignment:MainAxisAlignment.start,
-  children: [
-  Container(
-    width: 220,
-    decoration: BoxDecoration(
+mainAxisAlignment:MainAxisAlignment.start,
+children: [
+Container(
+  width: 220,
+  decoration: BoxDecoration(
       border: Border.all(
         color: Colors.white,
       ),
 
       borderRadius: BorderRadius.circular(50),
 
-    ),child: TextButton(child:const Text('Sign In',style: TextStyle(
+  ),child: TextButton(child:const Text('Sign In',style: TextStyle(
       color: Colors.white,
       fontSize: 25
-  ),) ,onPressed:(){
+),) ,onPressed:(){
 Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>SingInPageScreen()), (route) => false) ; } ,),
-  ),
-  const SizedBox(
-    height: 15,
-  ),
+),
+const SizedBox(
+  height: 15,
+),
 
-  Container(
-    width: 220,
-    decoration: BoxDecoration(
+Container(
+  width: 220,
+  decoration: BoxDecoration(
       color: HexColor('EFDECC'),
       border: Border.all(
         color: Colors.white,
@@ -98,13 +98,13 @@ Navigator.pushAndRemoveUntil(context, MaterialPageRoute(builder: (context)=>Sing
 
       borderRadius: BorderRadius.circular(50),
 
-    ),child: TextButton(child:Text('Sign Up',style: TextStyle(
+  ),child: TextButton(child:Text('Sign Up',style: TextStyle(
       color:HexColor('#937F6B'),
       fontSize: 25
-  ),) ,onPressed:(){} ,),
-  ),
+),) ,onPressed:(){} ,),
+),
 
-  ],
+],
 ),
           const SizedBox(height: 80,)
         ],
